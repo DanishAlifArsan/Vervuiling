@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     private BoxCollider2D boxCollider;
     private float wallJumpCooldown;
     private float horizontalInput;
+    private Vector3 respawnPoint;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask wallLayer;
     [SerializeField] private float speed;
@@ -17,6 +18,7 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
+        respawnPoint = transform.position;
     }
 
     void Update()
@@ -67,7 +69,7 @@ public class Player : MonoBehaviour
         {
             if (horizontalInput == 0)
             {
-                rb.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 10, 0);
+                rb.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 6, 3);
                 transform.localScale = new Vector3(-Mathf.Sign(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
             else
@@ -79,9 +81,18 @@ public class Player : MonoBehaviour
         } 
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D other) 
     {
-    
+        if (other.tag == "Token")
+        {
+            Destroy(other.gameObject);
+        }
+        else if (other.tag == "FallDetector")
+        {
+            transform.position = respawnPoint;
+            rb.velocity = new Vector2(0, 0);
+            //teleportSoundEffect.Play();
+        }
     }
 
     private bool isGrounded()
