@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -10,7 +11,8 @@ public class Player : MonoBehaviour
     private float horizontalInput;
     private Vector3 respawnPoint;
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private LayerMask wallLayer;
+
+    [Header("Player Settings")]
     [SerializeField] private float speed;
     [SerializeField] private float jumpSpeed;
 
@@ -40,7 +42,7 @@ public class Player : MonoBehaviour
 
             if (onWall() && !isGrounded())
             {
-                rb.gravityScale = 0;
+                rb.gravityScale = 1f;
                 rb.velocity = Vector2.zero;
             }
             else
@@ -92,6 +94,7 @@ public class Player : MonoBehaviour
             transform.position = respawnPoint;
             rb.velocity = new Vector2(0, 0);
             //teleportSoundEffect.Play();
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
@@ -103,7 +106,7 @@ public class Player : MonoBehaviour
 
     private bool onWall()
     {
-        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(transform.localScale.x, 0), 0.1f, wallLayer);
+        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(transform.localScale.x, 0), 0.1f, groundLayer);
         return raycastHit.collider != null;
     }
 }
