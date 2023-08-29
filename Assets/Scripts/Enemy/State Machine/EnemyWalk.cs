@@ -13,6 +13,11 @@ public class EnemyWalk : BaseState
 
     public override void UpdateState(Enemy enemy, StateMachine stateMachine)
     {
+        if (enemy.playerInSight())
+        {
+            stateMachine.SwitchState(enemy, stateMachine.attackState);
+        }
+
         if(movingLeft) {
             if (enemy.transform.position.x >= enemy.leftEdge.position.x)
             {

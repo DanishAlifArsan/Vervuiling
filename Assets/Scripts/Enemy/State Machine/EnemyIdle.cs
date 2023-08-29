@@ -10,6 +10,12 @@ public class EnemyIdle : BaseState
 
     public override void UpdateState(Enemy enemy, StateMachine stateMachine)
     {
+        if (enemy.playerInSight())
+        {
+            idleTimer = 0f;
+            stateMachine.SwitchState(enemy, stateMachine.attackState);
+        }
+
         if (idleTimer < enemy.idleDuration)
         {
             idleTimer += Time.deltaTime;

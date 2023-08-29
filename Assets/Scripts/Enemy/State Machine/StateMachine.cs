@@ -8,6 +8,7 @@ public class StateMachine : MonoBehaviour
     public BaseState currentState;
     public EnemyIdle idleState = new EnemyIdle();
     public EnemyWalk walkState = new EnemyWalk();
+    public EnemyAttack attackState = new EnemyAttack();
     
     // Start is called before the first frame update
     public void StartState(Enemy enemy)
