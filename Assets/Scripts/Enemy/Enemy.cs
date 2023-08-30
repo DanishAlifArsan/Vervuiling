@@ -54,4 +54,13 @@ public class Enemy : MonoBehaviour
             //damage player
         }
     }
+
+    public void TakeDamage() {
+        stateMachine.SwitchState(this, stateMachine.deathState);
+    }
+
+    private void Deactivate()
+    {
+        gameObject.SetActive(false);
+    }
 }

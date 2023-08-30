@@ -6,10 +6,11 @@ using UnityEngine.UI;
 
 public class TimeBasedScore : MonoBehaviour
 {
+    public static TimeBasedScore instance;
     [SerializeField] private Text timeText;
-    private float score;
+    public float score {get; private set;}
     private int minutes;
-    private int seconds;
+    private float seconds;
 
     // Start is called before the first frame update
     void Start()
@@ -22,9 +23,9 @@ public class TimeBasedScore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score += Time.deltaTime;
-        seconds  = (int) score;
-        timeText.text = String.Format("{0:00}:{1:00}", minutes, seconds);
+        seconds += Time.deltaTime;
+        score  += Time.deltaTime;
+        timeText.text = String.Format("{0:00}:{1:00}", minutes, (int) seconds);
 
         if (seconds > 59)
         {

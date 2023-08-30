@@ -9,18 +9,13 @@ public class StateMachine : MonoBehaviour
     public EnemyIdle idleState = new EnemyIdle();
     public EnemyWalk walkState = new EnemyWalk();
     public EnemyAttack attackState = new EnemyAttack();
+    public EnemyDeath deathState = new EnemyDeath();
     
     // Start is called before the first frame update
     public void StartState(Enemy enemy)
     {
         currentState = idleState;
         currentState.EnterState(enemy, this);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void SwitchState(Enemy enemy, BaseState state) {
