@@ -1057,7 +1057,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 926450789}
-  attackRange: 0.5
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -1066,6 +1065,12 @@ MonoBehaviour:
     m_Bits: 64
   speed: 10
   jumpSpeed: 10
+  coyoteTime: 0.25
+  attackRange: 1
+  attackRate: 2
+  extraJump: 1
+  wallJumpX: 2000
+  wallJumpY: 750
 --- !u!50 &548741141
 Rigidbody2D:
   serializedVersion: 4
