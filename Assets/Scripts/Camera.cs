@@ -9,7 +9,7 @@ public class Camera : MonoBehaviour
     [SerializeField] private float cameraSpeed;
     private float lookAhead;
 
-    void Update()
+    void FixedUpdate()
     {
         transform.position = new Vector3(player.position.x + lookAhead, player.position.y, transform.position.z);
         lookAhead = Mathf.Lerp(lookAhead, (aheadDistance * player.localScale.x), Time.deltaTime * cameraSpeed);

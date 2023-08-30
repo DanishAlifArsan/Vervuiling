@@ -57,6 +57,8 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage() {
         stateMachine.SwitchState(this, stateMachine.deathState);
+        //GetComponent<Collider2D>().enabled = false;
+        //this.enabled = false;
     }
 
     private void Deactivate()
