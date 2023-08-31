@@ -6,16 +6,20 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private BoxCollider2D boxCollider;
-    private float wallJumpCooldown;
+    private Animator anim;
+    private CapsuleCollider2D playerCollider;
+    private float wallJumpCooldown = 2;
     private float horizontalInput;
     private Vector3 respawnPoint;
     public Transform attackPoint;
     public LayerMask enemyLayer;
+    // public LayerMask bossLayer;
     [SerializeField] private LayerMask groundLayer;
     private float nextAttackTime = 0f;
     private float coyoteCounter;
     private int jumpCounter;
+    public int health = 100;
+	public GameObject deathEffect;
 
     [Header("Player Settings")]
     [SerializeField] private float speed;
@@ -31,7 +35,8 @@ public class Player : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        boxCollider = GetComponent<BoxCollider2D>();
+        anim = GetComponent<Animator>();
+        playerCollider = GetComponent<CapsuleCollider2D>();
         respawnPoint = transform.position;
     }
 
@@ -39,14 +44,18 @@ public class Player : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal");
 
+        //Animation
+        anim.SetBool("Run", horizontalInput != 0);
+        anim.SetBool("Grounded", isGrounded());
+
         //Flip Player
         if(horizontalInput > 0.01f)
         {
-            transform.localScale = Vector3.one;
+            transform.localScale = new Vector2(2, 2);
         }
         else if(horizontalInput < -0.01f)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector2(-2, 2);
         }
 
         //Movement
@@ -88,6 +97,7 @@ public class Player : MonoBehaviour
             {
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;
+                anim.SetTrigger("Attack");
             }
         }
     }
@@ -139,6 +149,13 @@ public class Player : MonoBehaviour
             enemy.GetComponent<Enemy>().TakeDamage();
             Debug.Log("Hit " + enemy.name);
         }
+
+        // Collider2D [] hitBoss = Physics2D.OverlapCircleAll(attackPoint, attackRange, bossLayer);
+
+        // foreach(Collider2D boss in hitEnemy)
+        // {
+        //     boss.GetComponent<BossHealth>().TakeDamage(75);
+        // }
     }
 
     void OnDrawGizmosSelected()
@@ -159,21 +176,61 @@ public class Player : MonoBehaviour
         }
         else if (other.tag == "FallDetector")
         {
-            transform.position = respawnPoint;
-            rb.velocity = new Vector2(0, 0);
+            Die();
             //teleportSoundEffect.Play();
         }
     }
 
     private bool isGrounded()
     {
-        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.5f, groundLayer);
+        RaycastHit2D raycastHit = Physics2D.BoxCast(playerCollider.bounds.center, playerCollider.bounds.size, 0, Vector2.down, 0.5f, groundLayer);
         return raycastHit.collider != null;
     }
 
     private bool onWall()
     {
-        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(transform.localScale.x, 0), 0.01f, groundLayer);
+        RaycastHit2D raycastHit = Physics2D.BoxCast(playerCollider.bounds.center, playerCollider.bounds.size, 0, new Vector2(transform.localScale.x, 0), 0.01f, groundLayer);
         return raycastHit.collider != null;
     }
+
+    public void TakeDamage(int damage)
+	{
+		health -= damage;
+
+		StartCoroutine(DamageAnimation());
+
+		if (health <= 0)
+		{
+			Die();
+		}
+	}
+
+	void Die()
+	{
+		transform.position = respawnPoint;
+        health = 100;
+	}
+
+    IEnumerator DamageAnimation()
+	{
+		SpriteRenderer[] srs = GetComponentsInChildren<SpriteRenderer>();
+		for (int i = 0; i < 3; i++)
+		{
+			foreach (SpriteRenderer sr in srs)
+			{
+				Color c = sr.color;
+				c.a = 0;
+				sr.color = c;
+			}
+			yield return new WaitForSeconds(.1f);
+
+			foreach (SpriteRenderer sr in srs)
+			{
+				Color c = sr.color;
+				c.a = 1;
+				sr.color = c;
+			}
+			yield return new WaitForSeconds(.1f);
+		}
+	}
 }
