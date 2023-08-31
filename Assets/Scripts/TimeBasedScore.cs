@@ -1,13 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class TimeBasedScore : MonoBehaviour
 {
     public static TimeBasedScore instance;
-    [SerializeField] private Text timeText;
+    [SerializeField] private TextMeshProUGUI timeText;
     public float score {get; private set;}
     private int minutes;
     private float seconds;
@@ -15,6 +16,7 @@ public class TimeBasedScore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         score = 0;
         minutes = 0;
         seconds = 0;
