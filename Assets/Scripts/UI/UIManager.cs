@@ -17,17 +17,19 @@ public class UIManager : MonoBehaviour
         {
             if(pauseScreen.activeInHierarchy) {
                 pauseScreen.SetActive(false);
+                Time.timeScale = 1;
             } else {
                 pauseScreen.SetActive(true);
+                Time.timeScale = 0;
             }  
         }
 
-        if (pauseScreen.activeInHierarchy)
-        {
-            Time.timeScale = 0;
-        } else {
-            Time.timeScale = 1;
-        }
+        // if (pauseScreen.activeInHierarchy)
+        // {
+        //     Time.timeScale = 0;
+        // } else {
+        //     Time.timeScale = 1;
+        // }
     }
 
     public void Restart() {

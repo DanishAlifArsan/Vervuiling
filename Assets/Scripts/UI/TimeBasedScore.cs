@@ -9,6 +9,7 @@ public class TimeBasedScore : MonoBehaviour
 {
     public static TimeBasedScore instance;
     [SerializeField] private TextMeshProUGUI timeText;
+    public float minimumTime;
     public float score {get; private set;}
     private int minutes;
     private float seconds;
