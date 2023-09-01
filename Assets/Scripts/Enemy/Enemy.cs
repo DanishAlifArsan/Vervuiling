@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float attackRange;
     [SerializeField] private float colliderDistance;
     [SerializeField] private LayerMask playerLayer;
+    private Player player;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +39,7 @@ public class Enemy : MonoBehaviour
 
         if(hit.collider != null) {
             //mendapatkan nyawa dari player
+            player = hit.transform.GetComponent<Player>();
         }
 
         return hit.collider != null;
@@ -52,6 +54,7 @@ public class Enemy : MonoBehaviour
     private void DamagePlayer() {
         if (playerInSight()) {
             //damage player
+            player.TakeDamage(100);
         }
     }
 

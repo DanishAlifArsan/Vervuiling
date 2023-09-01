@@ -15,7 +15,7 @@ public class EnemyAttack : BaseState
         if(enemy.playerInSight()) {
             if (cooldownTimer >= enemy.attackCooldown) {
                 cooldownTimer = 0;
-                enemy.animator.SetTrigger("Attack");
+                // enemy.animator.SetTrigger("Attack");
             } 
         } else {
             stateMachine.SwitchState(enemy, stateMachine.idleState);
