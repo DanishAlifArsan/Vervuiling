@@ -87,7 +87,7 @@ public class Player : MonoBehaviour
         //Attack
         if(Time.time >= nextAttackTime)
         {
-            if(Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.K))
+            if(Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.J))
             {
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;

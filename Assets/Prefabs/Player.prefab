@@ -199,7 +199,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5425789327068360834}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff6909462e11f154e981458e75674f10, type: 3}
   m_Name: 
@@ -212,15 +212,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   health: 100
-  deathEffect: {fileID: 0}
-  speed: 10
-  jumpSpeed: 10
-  coyoteTime: 0.25
   attackRange: 1.5
   attackRate: 2
   extraJump: 1
-  wallJumpX: 2000
-  wallJumpY: 750
 --- !u!95 &5425789326312558823
 Animator:
   serializedVersion: 5
