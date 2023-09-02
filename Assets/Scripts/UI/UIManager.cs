@@ -9,10 +9,18 @@ public class UIManager : MonoBehaviour
     
     private void Awake()
     {
-        pauseScreen.SetActive(false);
+        if (pauseScreen != null)
+        {
+            pauseScreen.SetActive(false);    
+        }
     }
 
     private void Update() {
+        if (pauseScreen == null)
+        {
+            return;
+        }
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if(pauseScreen.activeInHierarchy) {
