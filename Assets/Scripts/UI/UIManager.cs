@@ -6,9 +6,12 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject pauseScreen;
+
+    public bool isAblePause;
     
     private void Awake()
     {
+        isAblePause = true;
         if (pauseScreen != null)
         {
             pauseScreen.SetActive(false);    
@@ -21,7 +24,7 @@ public class UIManager : MonoBehaviour
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && isAblePause)
         {
             if(pauseScreen.activeInHierarchy) {
                 pauseScreen.SetActive(false);
@@ -31,13 +34,6 @@ public class UIManager : MonoBehaviour
                 Time.timeScale = 0;
             }  
         }
-
-        // if (pauseScreen.activeInHierarchy)
-        // {
-        //     Time.timeScale = 0;
-        // } else {
-        //     Time.timeScale = 1;
-        // }
     }
 
     public void Restart() {

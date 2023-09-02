@@ -11,6 +11,7 @@ using UnityEngine.UI;
 public class FinishLevel : MonoBehaviour
 {
     [SerializeField] private GameObject finishUI;
+    [SerializeField] private UIManager manager;
     [SerializeField] private Image vidaHolder;
     [SerializeField] private Sprite[] vida;
     [SerializeField] private Image[] bigStars;
@@ -23,13 +24,24 @@ public class FinishLevel : MonoBehaviour
         finishUI.SetActive(false);
     }
 
+    void Update() {
+        if (finishUI.activeInHierarchy)
+        {
+            manager.isAblePause = false;
+            Time.timeScale = 0;
+        } else {
+            Time.timeScale = 1;
+            manager.isAblePause = true;
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collider) 
     {
+        Debug.Log("Finish Level");
         LevelClear();          
     }
 
     private void LevelClear() { 
-        Time.timeScale = 0;
         finishUI.SetActive(true);
         int counter = 1;
         Color maxOpacity = new Color(1,0.5581461f,0.5320755f,1);
