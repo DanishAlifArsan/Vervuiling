@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
 	//Next, drag it into the slot in playerMovement on your player
 
 	public PlayerData Data;
+	private Animator anim;
 
 	#region Variables
 	//Components
@@ -65,6 +66,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
 	{
 		RB = GetComponent<Rigidbody2D>();
+		anim = GetComponent<Animator>();
 	}
 
 	private void Start()
@@ -75,6 +77,9 @@ public class PlayerMovement : MonoBehaviour
 
 	private void Update()
 	{
+
+		anim.SetBool("Hanging", LastOnWallTime >= 0);
+
         #region TIMERS
         LastOnGroundTime -= Time.deltaTime;
 		LastOnWallTime -= Time.deltaTime;

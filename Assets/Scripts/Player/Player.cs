@@ -71,6 +71,7 @@ public class Player : MonoBehaviour
         //Animation
         anim.SetBool("Run", horizontalInput != 0);
         anim.SetBool("Grounded", isGrounded());
+        //anim.SetBool("Hanging", onWall());
 
         //Flip Player
         // if(horizontalInput > 0.01f)
