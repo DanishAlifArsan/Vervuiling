@@ -120,16 +120,16 @@ TextureImporter:
       name: TileMap_1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2501
+        x: 14
+        y: 2500
         width: 500
-        height: 500
+        height: 501
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -237, y: -247}
+      - - {x: -250, y: -249}
         - {x: 250, y: -249.42805}
         - {x: 250, y: 239.99283}
         - {x: 249.12076, y: 239.99283}
@@ -145,10 +145,10 @@ TextureImporter:
       name: TileMap_1_1
       rect:
         serializedVersion: 2
-        x: 500
-        y: 2501
-        width: 500
-        height: 500
+        x: 514
+        y: 2500
+        width: 501
+        height: 501
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,9 +171,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1000
-        y: 2501
+        y: 2500
         width: 500
-        height: 500
+        height: 501
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,9 +192,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1500
-        y: 2501
+        y: 2500
         width: 500
-        height: 500
+        height: 501
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,14 +217,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2000
-        y: 2501
+        y: 2500
         width: 500
-        height: 500
+        height: 501
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -249.41394, y: 250.5}
+        - {x: -249.41394, y: -250.42813}
+        - {x: 250, y: -250.5}
+        - {x: -245.0177, y: 250.5}
       tessellationDetail: 0
       bones: []
       spriteID: 61bcc065b80ff224a85700116d239da3
@@ -238,9 +242,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 2001
+        y: 1998
         width: 500
-        height: 500
+        height: 501
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -261,10 +265,10 @@ TextureImporter:
       name: TileMap_1_6
       rect:
         serializedVersion: 2
-        x: 500
-        y: 2001
-        width: 500
-        height: 500
+        x: 504
+        y: 2000
+        width: 497
+        height: 498
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -285,9 +289,9 @@ TextureImporter:
       name: TileMap_1_7
       rect:
         serializedVersion: 2
-        x: 1000
-        y: 2001
-        width: 500
+        x: 1001
+        y: 2000
+        width: 499
         height: 500
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -307,9 +311,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1500
-        y: 2001
-        width: 500
-        height: 500
+        y: 2000
+        width: 498
+        height: 498
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -331,9 +335,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2000
-        y: 2001
+        y: 2000
         width: 500
-        height: 500
+        height: 499
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -357,7 +361,7 @@ TextureImporter:
         x: 0
         y: 1501
         width: 500
-        height: 500
+        height: 497
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -380,8 +384,8 @@ TextureImporter:
         serializedVersion: 2
         x: 500
         y: 1501
-        width: 500
-        height: 500
+        width: 499
+        height: 499
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -403,10 +407,10 @@ TextureImporter:
       name: TileMap_1_12
       rect:
         serializedVersion: 2
-        x: 1000
-        y: 1501
-        width: 500
-        height: 500
+        x: 999
+        y: 1500
+        width: 501
+        height: 501
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -427,7 +431,7 @@ TextureImporter:
         x: 1500
         y: 1501
         width: 500
-        height: 500
+        height: 499
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -446,9 +450,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2000
-        y: 1501
+        y: 1500
         width: 500
-        height: 500
+        height: 497
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -466,33 +470,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileMap_1_15
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1001
-        width: 500
-        height: 500
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 94bdf281e13f7ec49a455a3ea742c5f2
-      internalID: 983705140
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: TileMap_1_16
       rect:
         serializedVersion: 2
         x: 500
         y: 1001
-        width: 500
+        width: 499
         height: 500
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -518,7 +501,7 @@ TextureImporter:
         x: 1000
         y: 1001
         width: 500
-        height: 500
+        height: 498
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -536,8 +519,8 @@ TextureImporter:
       name: TileMap_1_18
       rect:
         serializedVersion: 2
-        x: 1500
-        y: 1001
+        x: 2000
+        y: 0
         width: 500
         height: 500
       alignment: 0
@@ -578,8 +561,8 @@ TextureImporter:
       name: TileMap_1_20
       rect:
         serializedVersion: 2
-        x: 0
-        y: 501
+        x: 1
+        y: 503
         width: 500
         height: 500
       alignment: 0
@@ -608,7 +591,7 @@ TextureImporter:
         x: 500
         y: 501
         width: 500
-        height: 500
+        height: 499
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -632,9 +615,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1000
-        y: 501
+        y: 502
         width: 500
-        height: 500
+        height: 499
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -656,7 +639,7 @@ TextureImporter:
       name: TileMap_1_23
       rect:
         serializedVersion: 2
-        x: 1500
+        x: 1501
         y: 501
         width: 500
         height: 500
@@ -761,7 +744,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1000
-        y: 1
+        y: 2
         width: 500
         height: 500
       alignment: 0
@@ -788,7 +771,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1500
-        y: 1
+        y: 2
         width: 500
         height: 500
       alignment: 0

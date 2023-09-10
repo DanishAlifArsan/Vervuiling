@@ -5,6 +5,7 @@ using UnityEngine;
 public class BossHealth : MonoBehaviour
 {
     public int health = 300;
+	[SerializeField] private GameObject finishLine;
 	
 	public GameObject deathEffect;
 	public bool isInvulnerable = false;
@@ -31,5 +32,6 @@ public class BossHealth : MonoBehaviour
 	void Die()
 	{
 		Destroy(gameObject);
+		finishLine.SetActive(true);
 	}
 }

@@ -405,7 +405,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -1244}
+  m_AnchoredPosition: {x: 0, y: -1330}
   m_SizeDelta: {x: -1820, y: -980}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1753532413
@@ -442,6 +442,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseScreen: {fileID: 0}
+  finishUI: {fileID: 0}
+  isAblePause: 0
 --- !u!1 &1897906142
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,23 +502,43 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'GENM CORP
+  m_text: 'CREDITS
+
+
+
+    GenM Corp
 
 
     Muhammad Nuril Haq    Designer
 
-    Narendra Atha    Artist
+    Narendra
+    Atha    Artist
 
-    Danish
-    Alif Arsan    Programmer
+    Danish Alif Arsan    Programmer
 
-    Senopati Fadhiilah Langit    Programmer
+    Senopati Fadhiilah Langit   
+    Programmer
+
+
+    Music
+
+
+    Music by https://www.steven-obrien.net/
+
+    Faun''s
+    Theme - Steven O''Brien
+
+    Human Resource Machine - Kyle Gabler
 
 
     Special
     thanks:
 
+
     You
+
+
+
 
 
     Thank you for playing our games
@@ -548,8 +570,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 90
-  m_fontSizeBase: 90
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

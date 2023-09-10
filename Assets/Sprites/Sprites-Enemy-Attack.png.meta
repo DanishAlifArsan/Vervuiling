@@ -122,7 +122,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 424
+        width: 420
         height: 492
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -143,8 +143,8 @@ TextureImporter:
         serializedVersion: 2
         x: 432
         y: 0
-        width: 406
-        height: 491
+        width: 401
+        height: 492
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,7 +164,7 @@ TextureImporter:
         serializedVersion: 2
         x: 844
         y: 0
-        width: 406
+        width: 398
         height: 492
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -183,9 +183,9 @@ TextureImporter:
       name: Sprites-Enemy-Attack_3
       rect:
         serializedVersion: 2
-        x: 1255
+        x: 1261
         y: 0
-        width: 403
+        width: 393
         height: 492
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -206,7 +206,7 @@ TextureImporter:
         serializedVersion: 2
         x: 1666
         y: 0
-        width: 405
+        width: 401
         height: 492
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -227,7 +227,7 @@ TextureImporter:
         serializedVersion: 2
         x: 2079
         y: 0
-        width: 404
+        width: 397
         height: 492
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -246,9 +246,9 @@ TextureImporter:
       name: Sprites-Enemy-Attack_6
       rect:
         serializedVersion: 2
-        x: 2494
+        x: 2491
         y: 0
-        width: 404
+        width: 397
         height: 492
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -288,12 +288,12 @@ TextureImporter:
       name: Sprites-Enemy-Attack_8
       rect:
         serializedVersion: 2
-        x: 3308
+        x: 3309
         y: 0
-        width: 425
+        width: 420
         height: 492
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.45922968, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -311,7 +311,7 @@ TextureImporter:
         serializedVersion: 2
         x: 3737
         y: 0
-        width: 401
+        width: 400
         height: 492
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -332,10 +332,10 @@ TextureImporter:
         serializedVersion: 2
         x: 4149
         y: 0
-        width: 429
+        width: 424
         height: 492
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.4736044, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -393,9 +393,9 @@ TextureImporter:
       name: Sprites-Enemy-Attack_13
       rect:
         serializedVersion: 2
-        x: 5414
+        x: 5415
         y: 0
-        width: 402
+        width: 397
         height: 492
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -414,7 +414,7 @@ TextureImporter:
       name: Sprites-Enemy-Attack_14
       rect:
         serializedVersion: 2
-        x: 5823
+        x: 5824
         y: 0
         width: 402
         height: 492
@@ -435,7 +435,7 @@ TextureImporter:
       name: Sprites-Enemy-Attack_15
       rect:
         serializedVersion: 2
-        x: 6236
+        x: 6235
         y: 0
         width: 401
         height: 492
@@ -502,8 +502,8 @@ TextureImporter:
         y: 0
         width: 423
         height: 492
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5280606, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

@@ -10,7 +10,6 @@ using UnityEngine.UI;
 
 public class FinishLevel : MonoBehaviour
 {
-    [SerializeField] private GameObject finishUI;
     [SerializeField] private UIManager manager;
     [SerializeField] private Image vidaHolder;
     [SerializeField] private Sprite[] vida;
@@ -18,22 +17,6 @@ public class FinishLevel : MonoBehaviour
     [SerializeField] private Image[] smallStars;
     [SerializeField] private TextMeshProUGUI winningTextHolder;
     private string[] winningText = {"Do you even try?","GOOD JOB!","It was an amazing work!"};
-    // Start is called before the first frame update
-    void Start()
-    {
-        finishUI.SetActive(false);
-    }
-
-    void Update() {
-        if (finishUI.activeInHierarchy)
-        {
-            manager.isAblePause = false;
-            Time.timeScale = 0;
-        } else {
-            Time.timeScale = 1;
-            manager.isAblePause = true;
-        }
-    }
 
     private void OnTriggerEnter2D(Collider2D collider) 
     {
@@ -42,7 +25,7 @@ public class FinishLevel : MonoBehaviour
     }
 
     private void LevelClear() { 
-        finishUI.SetActive(true);
+        manager.finishUI.SetActive(true);
         int counter = 1;
         Color maxOpacity = new Color(1,0.5581461f,0.5320755f,1);
         smallStars[0].color = maxOpacity;
