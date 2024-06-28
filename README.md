@@ -12,4 +12,5 @@ Vervuiling is a 2D Platformer game where the player assumes the role of Vaul, a 
 *	Scoring System
 *	Boss Battle
 
- ## [Download Link](https://danishaa.itch.io/vervuiling)
+ ## Download Link
+You can grab the game [here](https://danishaa.itch.io/vervuiling)
