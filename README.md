@@ -12,5 +12,13 @@ Vervuiling is a 2D Platformer game where the player assumes the role of Vaul, a 
 *	Scoring System
 *	Boss Battle
 
- ## Download Link
+## Download Link
 You can grab the game [here](https://danishaa.itch.io/vervuiling)
+
+## Credits
+| Name                       |Role        | Github                                                 |
+| -------------------------- | ---------- | ------------------------------------------------------ |
+| Muhammad Nuril Haq         | Designer   | [nurilhaqi](https://github.com/nurilhaqi)              |
+| Narendra Atha              | Artist     | [QAmatAS](https://github.com/QAmatAS)                  |
+| Danish Alif Arsan          | Programmer | [danishalifarsan](https://github.com/DanishAlifArsan)  |
+| Senopati Fadhiilah Langit  | Programmer | [DebonairDespot](https://github.com/DebonairDespot)    |
